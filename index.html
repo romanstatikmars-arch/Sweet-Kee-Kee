@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Kee Kee - Learn About Business & Money!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Comic Sans MS', 'Arial Rounded MT Bold', cursive, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            min-height: 100vh;
+        }
+        
+        header {
+            background: linear-gradient(90deg, #f093fb 0%, #f5576c 100%);
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        header h1 {
+            color: white;
+            font-size: 3em;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            color: #fff;
+            font-size: 1.3em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        nav {
+            background: rgba(255,255,255,0.95);
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav a {
+            color: #667eea;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        nav a:hover {
+            color: #f5576c;
+            transform: scale(1.1);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        .section {
+            background: white;
+            margin: 30px 0;
+            padding: 40px;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            animation: fadeIn 0.6s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        h2 {
+            color: #f5576c;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        h3 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin: 25px 0 15px 0;
+        }
+        
+        .step {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 15px;
+            border-left: 6px solid #f5576c;
+            transition: transform 0.3s;
+        }
+        
+        .step:hover {
+            transform: translateX(10px);
+        }
+        
+        .step-number {
+            background: #f5576c;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+        
+        .resource-box {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 15px;
+            text-align: center;
+        }
+        
+        .resource-box a {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 10px;
+            transition: all 0.3s;
+        }
+        
+        .resource-box a:hover {
+            background: #f5576c;
+            transform: scale(1.05);
+        }
+        
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .video-card {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .video-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .video-placeholder {
+            background: #667eea;
+            color: white;
+            padding: 80px 20px;
+            border-radius: 10px;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+        
+        .tip-box {
+            background: #fff3cd;
+            border: 3px solid #ffc107;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+        
+        .tip-box strong {
+            color: #f5576c;
+            font-size: 1.3em;
+        }
+        
+        footer {
+            background: rgba(0,0,0,0.8);
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+        }
+        
+        .emoji {
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🌟 Sweet Kee Kee 🌟</h1>
+        <p>Learn How to Start Your Own Business & Build Your Future!</p>
+    </header>
+    
+    <nav>
+        <a href="#business">Start a Business</a>
+        <a href="#property">Save for Property</a>
+        <a href="#resources">Resources</a>
+        <a href="#success">Success Stories</a>
+    </nav>
+    
+    <div class="container">
+        <section id="business" class="section">
+            <h2>🚀 How to Start Your Own Business (Kid Style!)</h2>
+            
+            <h3>What is a Business?</h3>
+            <p>A business is when you create something people want or solve a problem for others, and they pay you for it! You can start small and grow big. <span class="emoji">🌱➡️🌳</span></p>
+            
+            <h3>Step-by-Step Guide to Starting Your First Business</h3>
+            
+            <div class="step">
+                <span class="step-number">1</span>
+                <strong>Find Your Big Idea!</strong>
+                <p>What are you good at? What do people need? Ideas: lawn mowing, pet sitting, tutoring, making crafts, baking treats, or creating digital art!</p>
+            </div>
+            
+            <div class="step">
+                <span class="step-number">2</span>
+                <strong>Make a Plan</strong>
+                <p>Write down: What will you sell? Who will buy it? How much will it cost? Where will you work? A simple plan helps you stay organized!</p>
+            </div>
+            
+            <div class="step">
+                <span class="step-number">3</span>
+                <strong>Start Small with Little Money</strong>
+                <p>Use things you already have! Borrow equipment from family. Start with free tools online. Trade your skills with others. Every big business started small!</p>
+            </div>
+            
+            <div class="step">
+                <span class="step-number">4</span>
+                <strong>Tell Everyone!</strong>
+                <p>Make flyers, tell neighbors, ask family to spread the word, create social media posts (with parent permission), and be proud of what you're doing!</p>
+            </div>
+            
+            <div class="step">
+                <span class="step-number">5</span>
+                <strong>Give Great Service</strong>
+                <p>Be reliable, kind, and do your best work. Happy customers tell their friends, and your business grows!</p>
+            </div>
+            
+            <div class="step">
+                <span class="step-number">6</span>
+                <strong>Save & Grow Your Money</strong>
+                <p>Put some money back into your business to make it better. Save some for the future. Spend some on yourself as a reward!</p>
+            </div>
+            
+            <div class="tip-box">
+                <strong>💡 Smart Tip:</strong> You don't need lots of money to start! Many successful businesses began with just creativity and hard work. The key is solving a problem for others!
+            </div>
+        </section>
+        
+        <section id="property" class="section">
+            <h2>🏠 Learning About Property & Homeownership</h2>
+            
+            <h3>What Does It Mean to Own Property?</h3>
+            <p>Property means land or buildings that belong to you. When you're older, you can own a home, an apartment building, or land!</p>
+            
+            <h3>Smart Ways to Save for Your Future Home</h3>
+            
+            <div class="step">
+                <span class="step-number">1</span>
+                <strong>Start Saving Early</strong>
+                <p>Even $5 a week adds up! By the time you're an adult, you'll have a great start. Put birthday money and business profits in a savings account.</p>
+            </div>
+            
+            <div class="step">
+                <span class="step-number">2</span>
+                <strong>Learn About "OPM" (Other People's Money)</strong>
+                <p>This means using loans or partnerships. When you're an adult, banks can lend you money to buy property. You pay them back over time. It's like borrowing a big amount now and returning it little by little.</p>
+            </div>
+            
+            <div class="step">
+                <span class="step-number">3</span>
+                <strong>Build Good Credit</strong>
+                <p>Credit is like your money report card! When you're 18+, paying bills on time shows you're responsible. Good credit helps you get better loans.</p>
+            </div>
+            
+            <div class="step">
+                <span class="step-number">4</span>
+                <strong>Learn About Down Payments</strong>
+                <p>Usually you need to save 3-20% of a home's price. For a $100,000 home, that's $3,000-$20,000. Start saving now, and you'll get there!</p>
+            </div>
+            
+            <div class="step">
+                <span class="step-number">5</span>
+                <strong>Explore Special Programs</strong>
+                <p>When you're older, there are programs for first-time homebuyers, veterans, and people with lower incomes. These can help you buy with less money down!</p>
+            </div>
+            
+            <div class="tip-box">
+                <strong>💡 Important:</strong> Buying property is for adults with stable income and good planning. Use these years to save, learn, and build good money habits. Your future self will thank you!
+            </div>
+        </section>
+        
+        <section id="resources" class="section">
+            <h2>📚 Helpful Resources & Applications</h2>
+            
+            <div class="resource-box">
+                <h3>For Young Entrepreneurs</h3>
+                <a href="https://www.score.org/" target="_blank">SCORE - Free Business Mentoring</a>
+                <a href="https://www.sba.gov/" target="_blank">Small Business Administration</a>
+                <a href="https://www.juniorachievement.org/" target="_blank">Junior Achievement</a>
+            </div>
+            
+            <div class="resource-box">
+                <h3>Banking & Savings (Ages 13+)</h3>
+                <a href="https://www.capitalone.com/bank/savings-accounts/kids-savings-account/" target="_blank">Kids Savings Accounts</a>
+                <a href="https://www.greenlight.com/" target="_blank">Greenlight - Kids Debit Card</a>
+            </div>
+            
+            <div class="resource-box">
+                <h3>Learning About Homeownership (For Older Teens & Adults)</h3>
+                <a href="https://www.hud.gov/" target="_blank">HUD - Housing Information</a>
+                <a href="https://www.consumerfinance.gov/owning-a-home/" target="_blank">Consumer Finance - Home Buying Guide</a>
+                <a href="https://www.naca.com/" target="_blank">NACA - No Down Payment Programs</a>
+            </div>
+            
+            <div class="resource-box">
+                <h3>Financial Education</h3>
+                <a href="https://www.mymoney.gov/" target="_blank">MyMoney.gov - Financial Literacy</a>
+                <a href="https://www.practicalmoneyskills.com/" target="_blank">Practical Money Skills</a>
+            </div>
+        </section>
+        
+        <section id="success" class="section">
+            <h2>🌟 Success Stories from Real People!</h2>
+            
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-placeholder">📹 Video Testimonial #1</div>
+                    <h3>Sarah's Baking Business</h3>
+                    <p>"I started baking cookies for neighbors at age 12. By 16, I had saved $5,000! Now I'm 22 and I own a small bakery."</p>
+                </div>
+                
+                <div class="video-card">
+                    <div class="video-placeholder">📹 Video Testimonial #2</div>
+                    <h3>Marcus's Lawn Care Empire</h3>
+                    <p>"Started with my dad's lawnmower. Five years later, I have 3 employees and bought my first investment property at 25!"</p>
+                </div>
+                
+                <div class="video-card">
+                    <div class="video-placeholder">📹 Video Testimonial #3</div>
+                    <h3>Emma's Digital Design Studio</h3>
+                    <p>"I taught myself graphic design online for free. Started my business with $0. Now I work from home and just bought my first condo!"</p>
+                </div>
+                
+                <div class="video-card">
+                    <div class="video-placeholder">📹 Video Testimonial #4</div>
+                    <h3>The Johnson Family</h3>
+                    <p>"We used an FHA loan with only 3.5% down. As a family of teachers, we thought homeownership was impossible, but we did it!"</p>
+                </div>
+                
+                <div class="video-card">
+                    <div class="video-placeholder">📹 Video Testimonial #5</div>
+                    <h3>David's Tutoring Success</h3>
+                    <p>"Started tutoring kids in math for $10/hour at 14. Saved every penny. At 28, I own 2 rental properties and work for myself!"</p>
+                </div>
+                
+                <div class="video-card">
+                    <div class="video-placeholder">📹 Video Testimonial #6</div>
+                    <h3>Team of Teen Entrepreneurs</h3>
+                    <p>"We pooled our money and started a car washing business. Partnership means less risk and more fun. We're saving for college AND our futures!"</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>🎯 Your Action Plan Today!</h2>
+            
+            <div class="step">
+                <strong>This Week:</strong> Think of 3 business ideas you could start with $0-$20
+            </div>
+            
+            <div class="step">
+                <strong>This Month:</strong> Talk to an adult about opening a savings account. Start saving $5-$10 per week.
+            </div>
+            
+            <div class="step">
+                <strong>This Year:</strong> Start your first small business or job. Track every dollar you earn and save at least 25%.
+            </div>
+            
+            <div class="tip-box">
+                <strong>🎉 Remember:</strong> Every successful business owner and property owner started exactly where you are now - with a dream and determination. You can do this! The key is starting small, learning constantly, and never giving up!
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <p>Sweet Kee Kee - Empowering Young Entrepreneurs Since 2025</p>
+        <p>💪 Dream Big • Start Small • Never Give Up! 💫</p>
+    </footer>
+</body>
+</html>
